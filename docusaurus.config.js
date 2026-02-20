@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
 
-  url: 'https://gamemanagementapi.github.io/docs/',
+  url: 'https://gamemanagementapi.github.io',
   baseUrl: '/docs/',
   projectName: 'docs',
   organizationName: 'GameManagementAPI',
