@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
 
-  url: 'http://gma.c4vxl.de/',
+  url: 'https://gamemanagementapi.github.io/docs/',
   baseUrl: '/docs/',
   projectName: 'docs',
   organizationName: 'GameManagementAPI',
