@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkgma_docs=globalThis.webpackChunkgma_docs||[]).push([[2634],{192(s,t,a){a.r(t),a.d(t,{default:()=>e});a(6540);var c=a(6347),d=a(4848);function e(){return(0,d.jsx)(c.rd,{to:"/docs/getting-started"})}}}]);
