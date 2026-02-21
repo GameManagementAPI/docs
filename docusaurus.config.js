@@ -16,7 +16,7 @@ const config = {
 
 
   url: 'https://gamemanagementapi.github.io',
-  baseUrl: '/docs/',
+  baseUrl: '/',
   projectName: 'docs',
   organizationName: 'GameManagementAPI',
   trailingSlash: false,
