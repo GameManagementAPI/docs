@@ -39,6 +39,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          routeBasePath: "/",
           editUrl:
             'https://github.com/GameManagementAPI/docs/tree/main/',
         },
