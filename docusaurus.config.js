@@ -71,6 +71,11 @@ const config = {
             label: 'Docs',
           },
           {
+            href: 'https://gma.c4vxl.de/javaDocs/',
+            label: 'JavaDocs',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/GameManagementAPI/',
             label: 'GitHub',
             position: 'right',
@@ -87,8 +92,12 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/GameManagementAPI/',
               },
+              {
+                label: 'JavaDocs',
+                href: 'https://gma.c4vxl.de/javaDocs/',
+              },
             ],
-          },
+          }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} c4vxl.`,
       },
