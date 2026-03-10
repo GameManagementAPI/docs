@@ -48,7 +48,7 @@ fun onEquip(event: GamePlayerEquipEvent) {
 
     player.inventory.setItem(0, ItemBuilder(
         Material.DIAMOND_SWORD,
-        name = player.language.child("onlysword").getCmp("game.sword.name"),
+        name = player.language.child("example").getCmp("game.sword.name"),
         unbreakable = true
     )
         .onEvent(PlayerDropItemEvent::class.java, dropHandler)
@@ -108,3 +108,7 @@ Other useful events you might want to listen to are:
 - [GamePlayerQuitEvent](https://gma.c4vxl.de/javaDocs/-game-manager/de.c4vxl.gamemanager.gma.event.player/-game-player-quit-event/index.html)
 
 More in [#Events](../gamemanagementapi/events.md)
+
+## Source
+You can find the source code of this example at:<br></br>
+[https://github.com/GameManagementAPI/ExamplePlugin](https://github.com/GameManagementAPI/ExamplePlugin)
