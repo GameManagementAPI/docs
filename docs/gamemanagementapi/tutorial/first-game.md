@@ -8,7 +8,7 @@ This section will guide you through creating a very simple game using GMA.
 To keep things easy to understand, we will start with a minimal example:  
 every player receives a **diamond sword** and a few **golden apples** when the game begins.
 
-Before continuing, make sure your project is already set up as described in either the [Quick start using GMA-Template](../first-steps/quick-start.md) or the [Installation](../first-steps/installation.md) section.
+Before continuing, make sure your project is already set up as described in either the [Quick start using GMA-Template](../../first-steps/quick-start.md) or the [Installation](../../first-steps/installation.md) section.
 
 ## The GameHandler
 
@@ -107,7 +107,7 @@ Other useful events you might want to listen to are:
 - [GameStopEvent](https://gma.c4vxl.de/javaDocs/-game-manager/de.c4vxl.gamemanager.gma.event.game/-game-stop-event/index.html)
 - [GamePlayerQuitEvent](https://gma.c4vxl.de/javaDocs/-game-manager/de.c4vxl.gamemanager.gma.event.player/-game-player-quit-event/index.html)
 
-More in [#Events](../gamemanagementapi/events.md)
+More in [#Events](../events.md)
 
 ## Source
 You can find the source code of this example at:<br></br>
