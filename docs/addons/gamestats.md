@@ -28,29 +28,34 @@ config:
 ```
 
 ## Hologram Command
-The `/stats-hologram` command allows you to create or remove a hologram that displays player statistics.
+The `/hologram` command allows you to create or remove holograms that display player statistics.
 
-Usage: `/stats-hologram <create|remove> [statistics...]`
+Usage: `/hologram <create|remove> [leaderboard|custom] [statistics...]`
 Permission: `de.c4vxl.gamemanager.perms.command.stats-hologram`
 
 :::note
-- Only one stats hologram can exist at a time.
 - When the hologram is created or removed, it is automatically updated for all online players.
 :::
 
-### Creating a hologram
+### Creating a custom hologram
 Creates a statistics hologram at your current location.<br></br>
-Usage: `/stats-hologram create <statistics...>`
+Usage: `/hologram create custom <statistics...>`
 
 The hologram will be placed at the player's location who runs the command.<br></br>
 You can specify multiple statistics that will appear as hologram lines.<br></br>
 _Only valid statistic identifiers will be used._
 
-Example: `/stats-hologram create kills deaths wins`
+Example: `/hologram create custom kills deaths wins`
+
+### Creating a leaderboard hologram
+Creates a leaderboard-hologram at your current location.<br></br>
+Usage: `/hologram create leaderboard`
+
+The hologram will be placed at the player's location who runs the command.<br></br>
 
 ### Removing a hologram
-Removes the currently active statistics hologram.<br></br>
-Usage: `/stats-hologram remove`
+Removes the nearest hologram within a 5 block radius around the player.<br></br>
+Usage: `/hologram remove`
 
 
 ## Stats Command
@@ -62,3 +67,6 @@ This command displays statistics that are tracked by **GameStats**.
 - If no statistic is specified, the command will display all available statistics for the player.
 - If a specific statistic is provided, only that statistic will be shown.
 
+## Top Command
+The top command allows players to view the current top players of a specific statistic.
+Usage: `/top [statistic]`
