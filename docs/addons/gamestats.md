@@ -25,6 +25,9 @@ GameStats generates a `config.yml` file. This config file can be found at `plugi
 config:
   # Directory for database
   db-path: "./stats/"
+
+  # The default statistic to be used for leaderboards
+  default-leaderboard-statistic: "WIN"
 ```
 
 ## Hologram Command
@@ -49,9 +52,11 @@ Example: `/hologram create custom kills deaths wins`
 
 ### Creating a leaderboard hologram
 Creates a leaderboard-hologram at your current location.<br></br>
-Usage: `/hologram create leaderboard`
+Usage: `/hologram create leaderboard [statistic]`
 
 The hologram will be placed at the player's location who runs the command.<br></br>
+
+Example: `/hologram create leaderboard win`
 
 ### Removing a hologram
 Removes the nearest hologram within a 5 block radius around the player.<br></br>
