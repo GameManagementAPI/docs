@@ -38,12 +38,6 @@ In this example we give each player:
 ```kotlin title="GameHandler.kt"
 @EventHandler
 fun onEquip(event: GamePlayerEquipEvent) {
-    val dropHandler = object : ItemBuilder.ItemEventHandler<PlayerDropItemEvent> {
-        override fun handle(event: PlayerDropItemEvent) {
-            event.isCancelled = true
-        }
-    }
-
     val player = event.player.bukkitPlayer
 
     player.inventory.setItem(0, ItemBuilder(
@@ -51,14 +45,18 @@ fun onEquip(event: GamePlayerEquipEvent) {
         name = player.language.child("example").getCmp("game.sword.name"),
         unbreakable = true
     )
-        .onEvent(PlayerDropItemEvent::class.java, dropHandler)
+        .onEvent(PlayerDropItemEvent::class.java) { event ->
+            event.isCancelled = true
+        }
         .build())
 
     player.inventory.setItem(1, ItemBuilder(
         Material.GOLDEN_APPLE,
         amount = 5
     )
-        .onEvent(PlayerDropItemEvent::class.java, dropHandler)
+        .onEvent(PlayerDropItemEvent::class.java) { event ->
+            event.isCancelled = true
+        }
         .build())
 }
 ```

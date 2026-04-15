@@ -28,7 +28,7 @@ You can apply custom modifications to the `ItemMeta` using `editMeta`.
 ```kotlin title="example"
 val item = ItemBuilder(Material.DIAMOND_SWORD)
     .editMeta {
-        setCustomModelData(123)
+        it.setCustomModelData(123)
     }
     .build()
 ```
@@ -40,18 +40,18 @@ Items can have **instance-specific** event listeners. These only trigger if the 
 You can register events using the `.onEvent` method.
 ```kotlin title="example"
 val sword = ItemBuilder(Material.DIAMOND_SWORD)
-    .onEvent(PlayerInteractEvent::class.java, object : ItemBuilder.ItemEventHandler<PlayerInteractEvent> {
-            override fun handle(event: PlayerInteractEvent) {
-                event.player.sendMessage(Component.text("You used your special sword!"))
-            }
-        })
+    .onEvent(PlayerInteractEvent::class.java) { event ->
+        event.player.sendMessage(Component.text("You used your special sword!"))
+    }
     .build()
 ```
 
 ### Event Priority
 You can define event priority (default: NORMAL):
 ```kotlin title="example"
-.onEvent(PlayerInteractEvent::class.java, handler, EventPriority.HIGH)
+.onEvent(PlayerInteractEvent::class.java, EventPriority.HIGH) { event ->
+    // Do something
+}
 ```
 
 ### Supported Events
