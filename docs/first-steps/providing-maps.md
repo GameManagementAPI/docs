@@ -43,10 +43,8 @@ builders:
 team:
   0:
     spawn: [ x, y, z, yaw, pitch ]
-    prefix: "<red>Team A</red>"
   1:
     spawn: [ x, y, z, yaw, pitch ]
-    prefix: "<blue>Team B</blue>"
 ```
 
 :::note

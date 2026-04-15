@@ -48,3 +48,39 @@ game.teamManager.join(player.gma, teamId = 1)
 ```kotlin title="example"
 game.teamManager.quit(player.gma)
 ```
+
+## Team labels
+Team labels define how a team is displayed to players. They are language-aware and can be customized or localized by plugins.
+
+Overview
+- Each team has a label based on its id.
+- Labels are language-specific.
+- Plugins can register custom translations.
+- If no translation is provided, a default fallback format is used.
+
+### Registering label translations
+Plugins can register translations for a specific team ID.
+
+- Each translation is a (languageName, value) pair.
+- The languageName must match the internal name of the Language.
+
+```kotlin title="example"
+Team.registerLabelTranslation(
+    id = 0,
+    "english" to "<red>Red Team</red>",
+    "german" to "<red>Rotes Team</red>"
+)
+```
+
+### Getting a team label
+There are two ways to retrieve a label:
+
+1. As a formatted component
+```kotlin title="example"
+val component = team.label(player.language)
+```
+
+2. As a raw string
+```kotlin title="example"
+val label = team.labelStr(player.language)
+```
